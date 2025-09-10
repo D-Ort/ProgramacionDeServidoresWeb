@@ -5,21 +5,38 @@
         <title>Mi Página Web</title>
     </head>
     <body>
-        <h1>Hola mundo</h1>
+        <h1>Laboratorio 1:</h1>
+        <p>Apuntes de HTML vistos en la asignatura</p>
+        <h2 id="Indice">Indice</h2>
+        <ul>
+            <li><a href="#Parrafos y Divisiones">Parrafos y Divisiones</a></li>
+            <li><a href="#Estilos de Letras Básicos">Estilos de Letras Básicos</a></li>
+            <li><a href="#Citas">Citas</a></li>
+            <li><a href="#Abreviaturas y Definiciones">Abreviaturas y Definiciones</a></li>
+            <li><a href="#Listas">Listas</a></li>
+            <li><a href="#Enlaces">Enlaces</a></li>
+            <li><a href="#Imágenes">Imágenes</a></li>
+        </ul>
+        <hr>
+        <h2 id="Parrafos y Divisiones">Parrafos y Divisiones:</h2>
         <p>Estoy probando los<br>saltos de línea.</p>
         <hr>
         <p>Estas etiquetas tambien<br />se pueden escribir con " /" porque no tienen etiqueta de cierre</p>
         <hr />
+        <h2 id="Estilos de Letras Básicos">Estilos de Letras Básicos:</h2>
         <p>Probando estilos básicos: <b>negrita,</b> <strong>strong,</strong> <i>cursiba,</i> <em>énfasis,</em> <mark>subrallado,</mark> <small>small,</small> <del>tachado,</del> <ins>subrallado lineal,</ins> <sub>subíndice,</sub> <sup>superíndice,</sup></p>
         <hr>
+        <h2 id="Citas">Citas:</h2>
         <blockquote>
             Esto sería una cita
         </blockquote>
         <p>Esto también es <q>una cita con comillas</q>.</p>
         <p>Esta forma también sirve, <cite>una cita en cursiba</cite>.</p>
         <hr>
+        <h2 id="Abreviaturas y Definiciones">Abreviaturas y Definiciones:</h2>
         <p>Ahora escribo una abrebiatura con su <abbr title="El significado de las siglas">abrebiatura</abbr> y se pueden añadir <dfn>definiciones</dfn> para que el buscador sepa que es una definición</p>
         <hr><hr>
+        <h2 id="Listas">Listas:</h2>
         <ol>
             <li>Estos elementos están ordenados</li>
             <li>Elemento 2</li>
@@ -72,5 +89,23 @@
             <dt>Definition term</dt>
             <dd>Definición ............</dd>
         </dl>
+        <hr>
+        <h2 id="Enlaces">Enlaces:</h2>
+        <p><a href="https://www.cunef.edu">enlace a página de internet</a></p>
+        <a href="https://www.cunef.edu">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/CUNEF_Universidad.png/330px-CUNEF_Universidad.png">
+        </a>
+        <p><a href="ejemplo.html">enlace a otro archivo</a></p>
+        <p><a href="textos/ejemplo2.html" target="_blank">enlace a otro archivo de una subcarpeta en una pestaña a parte</a></p>
+        <hr>
+        <h2 id="Imágenes">Imágenes</h2>
+        <img src="imagen.jpg" height="100">
+        <img src="imagen.jpg" width="100" title="Ordenador Aestetic">
+        <figure>
+            <img src="imagen.jpg" width="100" alt="Ordenador Aestetic">
+            <figcaption>Texto al pie de imagen</figcaption>
+        </figure>
+        <p><img src="imagen.jpg" width="100" alt="Ordenador Aestetic">Esta imagen está al <br> principio del texto, <img src="imagen.jpg" width="100" alt="Ordenador Aestetic"> y esta está en el medio para hacer una prueba de como quedaría todo</p>
+
     </body>
 </html>
