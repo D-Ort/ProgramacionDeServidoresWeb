@@ -16,6 +16,8 @@
             <li><a href="#Listas">Listas</a></li>
             <li><a href="#Enlaces">Enlaces</a></li>
             <li><a href="#Imágenes">Imágenes</a></li>
+            <li><a href="#Tablas">Tablas</a></li>
+            <li><a href="#Cuestionarios">Imágenes</a></li>
         </ul>
         <hr>
         <h2 id="Parrafos y Divisiones">Parrafos y Divisiones:</h2>
@@ -106,6 +108,110 @@
             <figcaption>Texto al pie de imagen</figcaption>
         </figure>
         <p><img src="imagen.jpg" width="100" alt="Ordenador Aestetic">Esta imagen está al <br> principio del texto, <img src="imagen.jpg" width="100" alt="Ordenador Aestetic"> y esta está en el medio para hacer una prueba de como quedaría todo</p>
-
+        <hr>
+        <h2 id="Tablas">Tablas:</h2>
+        <table>
+            <tr>
+                <th>Cabecera 1</th>
+                <th>Cabecera 2</th>
+                <th>Cabecera 3</th>
+            </tr>
+            <tr>
+                <td>Datos de tabla 1</td>
+                <td>Datos de tabla 2</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+            <tr>
+                <td>Datos de tabla 1</td>
+                <td>Datos de tabla 2</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th></th>
+                <th>Cabecera Vertical 1</th>
+                <th>Cabecera Vertical 2</th>
+            </tr>
+            <tr>
+                <th>Cabecera Horiizontal 1</th>
+                <td>Datos de tabla 2</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+            <tr>
+                <th>Cabecera Horiizontal 2</th>
+                <td>Datos de tabla 2</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+            <!-- Si quieres que un campo esté vacío, escribe la etiqueta pero sin contenido para evitar que el 
+            buscador se líe-->
+        </table>
+        <table>
+            <tr>
+                <th colspan="3">Cabecera</th>
+            </tr>
+            <tr>
+                <td scope="row">Datos de tabla 1</td>
+                <td rowspan="2">Datos de tabla 2</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+            <tr>
+                <td scope="row">Datos de tabla 1</td>
+                <td>Datos de tabla 3</td>
+            </tr>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Cabecera Vertical 1</th>
+                    <th>Cabecera Vertical 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Cabecera Horiizontal 1</th>
+                    <td>Datos de tabla 2</td>
+                    <td>Datos de tabla 3</td>
+                </tr>
+                <tr>
+                    <th>Cabecera Horiizontal 2</th>
+                    <td>Datos de tabla 2</td>
+                    <td>Datos de tabla 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Cabecera Horiizontal 2</th>
+                    <td>Datos de tabla 2</td>
+                    <td>Datos de tabla 3</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <h2 id="Cuestionarios">Cuestionarios:</h2>
+        <form action="" method="get">
+            <input type="text" name="nombre" value="Nombre:">
+            <input type="text" name="apellido1" placeholder="Escriba su 1º Apellido:">
+            <input type="text" name="edad" maxlength="3">
+            <input type="password" name="password">
+            <textarea name="comments" rows="4" cols="20"></textarea>
+            <br>
+            <input type="radio" name="option" value="option1" checked> Option 1
+            <input type="radio" name="option" value="option2" checked> Option 2
+            <input type="radio" name="option" value="option3" checked> Option 3
+            <br>
+            <input type="checkbox" name="languages" value="Python" checked> Python
+            <input type="checkbox" name="languages" value="Java" checked> Java
+            <br>
+            <select name="Country">
+                <option value="us">Estados Unidos</option>
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar">
+            <button type="submit">Enviar</button>
+        </form>
     </body>
 </html>
