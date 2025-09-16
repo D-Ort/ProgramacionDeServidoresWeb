@@ -7,6 +7,7 @@
     <body>
         <h1>Laboratorio 1:</h1>
         <p>Apuntes de HTML vistos en la asignatura</p>
+
         <h2 id="Indice">Indice</h2>
         <ul>
             <li><a href="#Parrafos y Divisiones">Parrafos y Divisiones</a></li>
@@ -20,6 +21,7 @@
             <li><a href="#Cuestionarios">Imágenes</a></li>
         </ul>
         <hr>
+
         <h2 id="Parrafos y Divisiones">Parrafos y Divisiones:</h2>
         <p>Estoy probando los<br>saltos de línea.</p>
         <hr>
@@ -38,6 +40,7 @@
         <h2 id="Abreviaturas y Definiciones">Abreviaturas y Definiciones:</h2>
         <p>Ahora escribo una abrebiatura con su <abbr title="El significado de las siglas">abrebiatura</abbr> y se pueden añadir <dfn>definiciones</dfn> para que el buscador sepa que es una definición</p>
         <hr><hr>
+
         <h2 id="Listas">Listas:</h2>
         <ol>
             <li>Estos elementos están ordenados</li>
@@ -92,6 +95,7 @@
             <dd>Definición ............</dd>
         </dl>
         <hr>
+
         <h2 id="Enlaces">Enlaces:</h2>
         <p><a href="https://www.cunef.edu">enlace a página de internet</a></p>
         <a href="https://www.cunef.edu">
@@ -100,6 +104,7 @@
         <p><a href="ejemplo.html">enlace a otro archivo</a></p>
         <p><a href="textos/ejemplo2.html" target="_blank">enlace a otro archivo de una subcarpeta en una pestaña a parte</a></p>
         <hr>
+
         <h2 id="Imágenes">Imágenes</h2>
         <img src="imagen.jpg" height="100">
         <img src="imagen.jpg" width="100" title="Ordenador Aestetic">
@@ -109,6 +114,7 @@
         </figure>
         <p><img src="imagen.jpg" width="100" alt="Ordenador Aestetic">Esta imagen está al <br> principio del texto, <img src="imagen.jpg" width="100" alt="Ordenador Aestetic"> y esta está en el medio para hacer una prueba de como quedaría todo</p>
         <hr>
+
         <h2 id="Tablas">Tablas:</h2>
         <table>
             <tr>
@@ -189,12 +195,46 @@
             </tfoot>
         </table>
         <hr>
+
         <h2 id="Cuestionarios">Cuestionarios:</h2>
+        <!--method="get" -> sirve para enviar información a través de la url, no deja archivos-->
+        <!--method="post" enctype="multipart/form-data" -> sirve para enviar de forma más segura y permite archivos-->
         <form action="" method="get">
-            <input type="text" name="nombre" value="Nombre:">
-            <input type="text" name="apellido1" placeholder="Escriba su 1º Apellido:">
-            <input type="text" name="edad" maxlength="3">
-            <input type="password" name="password">
+            <fieldset>
+                <legend>Información de Usuario:</legend>
+                <label for="nombre">Nombre de Usuario:</label>
+                <input type="text" name="nombre" value="Nombre:" required><br>
+                <label for="apellido1">Apellido del Usuario:</label>
+                <input type="text" name="apellido1" placeholder="Escriba su 1º Apellido:"><br>
+                <label for="edad">Edad del Usuario:</label>
+                <input type="text" name="edad" maxlength="3"><br>
+                <label for="password">Password del Usuario:</label>
+                <input type="password" name="password" required><br>
+                <label for="cp">Código Postal del Usuario:</label>
+                <input type="text" name="cp" pattern="\d{5}" required><br>
+                <!--pattern="" -> Aqui puedes escribir Redex para limitar el imput que puede introducir el
+                usuario, las reglas son:
+                · "somechars"-> cadena de caracteres exacta
+                · '.'        -> cualquier caracter excepto \n
+                · '^'        -> principio de cadena
+                · '$'        -> final de cadena
+                · '*'        -> 0 o más repeticiones del caracter anterior
+                · '+'        -> 1 o más repeticiones del caracter anterior
+                · '?'        -> 0 o 1 repetición del caracter anterior
+                · '\'        -> escape de caracteres especiales
+                · "[]"       -> cualquiera de los caracteres contenidos
+                · "()"       -> agrupa caracteres para los cuantificadores
+                · "{}"       -> cuantificador de repeticiones
+                · '|'        -> operador OR
+                · '\w'       -> cualquier letra
+                · '\d'       -> cualquier dígito
+                · '\D'       -> cualquier caracter no dígito
+                · '\s'       -> cualquier espacio en blanco-->
+                <label for="email">Email del Usuario:</label>
+                <input type="email" name="email" required><br>
+                <label for="birthdate">Fecha nacimiento del Usuario:</label>
+                <input type="date" name="birthdate"><br>
+            </fieldset>
             <textarea name="comments" rows="4" cols="20"></textarea>
             <br>
             <input type="radio" name="option" value="option1" checked> Option 1
@@ -210,8 +250,17 @@
                 <option value="fr">Francia</option>
             </select>
             <br>
+            <input type="file" name="profilePicture" accept="image/*">
+            <br>
             <input type="submit" value="Enviar">
             <button type="submit">Enviar</button>
+            <button type="reset">Reestablecer</button>
+            <button type="button" onclick="alert('Botón presionado')">Haz click</button>
+            <input type="hidden" name="language" value="es">
         </form>
+        <hr>
+
+        <h2 id="iframe" >Iframes:</h2>
+        <iframe src="https://www.cunef.edu"></iframe>
     </body>
 </html>
