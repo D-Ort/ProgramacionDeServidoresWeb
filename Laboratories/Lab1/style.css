@@ -1,0 +1,41 @@
+@import url("style2.css");
+
+/*CSS se sobreescribe a si mismo manteniendo lo más específico o lo último que se ha establecido.*/
+
+span{
+    color: aqua;
+}
+#f{
+    background-color: aquamarine;
+}
+#c{
+    color:rgb(255,100,60);
+    background-color: #000000;
+}
+#l{
+    font-size: 1em;
+    font-family: Roboto;
+    font-weight: bold;
+    font-style: italic;
+    font-display: block;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#l::first-letter{
+    color: red;
+}
+a:hover{
+    color:blueviolet;
+}
+#exception{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+    overflow: scroll;
+    border: 2px dashed black;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 25px 25px 25px gray;
+}

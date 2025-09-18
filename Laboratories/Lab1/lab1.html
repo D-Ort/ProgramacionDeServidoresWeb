@@ -3,6 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>Mi Página Web</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            p{
+                color:blue;
+            }
+            #titulo1, #titulo2{
+                color:chartreuse;
+            }
+            .tituloh4{
+                color:cadetblue;
+            }
+            *{
+                font-family: monospace;
+            }
+            p.tituloh4{
+                color:darkorange;
+            }
+            p div{
+                color:cornflowerblue;
+            }
+            p>span{
+                color:darkslategray !important;
+            }
+        </style>
     </head>
     <body>
         <h1>Laboratorio 1:</h1>
@@ -10,24 +34,30 @@
 
         <h2 id="Indice">Indice</h2>
         <ul>
-            <li><a href="#Parrafos y Divisiones">Parrafos y Divisiones</a></li>
-            <li><a href="#Estilos de Letras Básicos">Estilos de Letras Básicos</a></li>
+            <li><a href="#ParrafosYDivisiones">Parrafos y Divisiones</a></li>
+            <li><a href="#EstilosDeLetrasBásicos">Estilos de Letras Básicos</a></li>
             <li><a href="#Citas">Citas</a></li>
-            <li><a href="#Abreviaturas y Definiciones">Abreviaturas y Definiciones</a></li>
+            <li><a href="#AbreviaturasYDefiniciones">Abreviaturas y Definiciones</a></li>
             <li><a href="#Listas">Listas</a></li>
             <li><a href="#Enlaces">Enlaces</a></li>
             <li><a href="#Imágenes">Imágenes</a></li>
             <li><a href="#Tablas">Tablas</a></li>
-            <li><a href="#Cuestionarios">Imágenes</a></li>
+            <li><a href="#Cuestionarios">Cuestionarios</a></li>
+            <li><a href="#iframes">Iframe</Iframe></a></li>
+            <li><a href="#bloque">Elementos en Bloque</a></li>
+            <li><a href="#linea">Elementos en Linea</Iframe></a></li>
+            <li><a href="#clasesEids">Clases e Ids</a></li>
+            <li><a href="#transformaciones">Transformaciones</a></li>
+            <li><a href="#css">CSS</a></li>
         </ul>
         <hr>
 
-        <h2 id="Parrafos y Divisiones">Parrafos y Divisiones:</h2>
+        <h2 id="ParrafosYDivisiones">Parrafos y Divisiones:</h2>
         <p>Estoy probando los<br>saltos de línea.</p>
         <hr>
         <p>Estas etiquetas tambien<br />se pueden escribir con " /" porque no tienen etiqueta de cierre</p>
         <hr />
-        <h2 id="Estilos de Letras Básicos">Estilos de Letras Básicos:</h2>
+        <h2 id="EstilosDeLetrasBásicos">Estilos de Letras Básicos:</h2>
         <p>Probando estilos básicos: <b>negrita,</b> <strong>strong,</strong> <i>cursiba,</i> <em>énfasis,</em> <mark>subrallado,</mark> <small>small,</small> <del>tachado,</del> <ins>subrallado lineal,</ins> <sub>subíndice,</sub> <sup>superíndice,</sup></p>
         <hr>
         <h2 id="Citas">Citas:</h2>
@@ -37,7 +67,7 @@
         <p>Esto también es <q>una cita con comillas</q>.</p>
         <p>Esta forma también sirve, <cite>una cita en cursiba</cite>.</p>
         <hr>
-        <h2 id="Abreviaturas y Definiciones">Abreviaturas y Definiciones:</h2>
+        <h2 id="AbreviaturasYDefiniciones">Abreviaturas y Definiciones:</h2>
         <p>Ahora escribo una abrebiatura con su <abbr title="El significado de las siglas">abrebiatura</abbr> y se pueden añadir <dfn>definiciones</dfn> para que el buscador sepa que es una definición</p>
         <hr><hr>
 
@@ -261,6 +291,46 @@
         <hr>
 
         <h2 id="iframe" >Iframes:</h2>
-        <iframe src="https://www.cunef.edu"></iframe>
+        <iframe src="https://www.cunef.edu" width="600" height="400"></iframe>
+
+        <h2 id="bloque">Elementos en Bloque:</h2>
+        <h3>Los títulos son elementos de bloque</h3>
+        <p>Los párrafos también, eso quiere decir que ocupan todo el ancho de la página</p>
+        <div>Las Divisiones tambien son elementos de bloque donde se pueden introducir elementos genéricos</div>
+
+        <h2 id="linea">Elementos en Linea:</h2>
+        <span>Esta frase es un elemento.</span>
+        <span>Y esta otra es distinta.</span>
+        <span>Esto hace que se vayan añadiendo en paralelo.</span>
+
+        <h2 id="clasesEids">Clases e Ids:</h2>
+        <p class="Parrafo">Este párrafo es de la clase Parrafo.</p>
+        <p class="Parrafo">Este también, la clase mepermite darles estilo juntos</p>
+        <p id="ultimo">Este párrafo tiene el id único de ultimo, que hace que le pueda dar estilo pero solo a él</p>
+        
+        <h2 id="transformaciones">Transformaciones:</h2>
+        <p>Se representa así &lt;p&gt; para que se muestre la etiqueta sin que el navegador la reconozca como una etiqueta real.</p>
+    
+        <h2 id="css">CSS</h2>
+        <p style="color: red;">Este texto está modificado con CSS para que esté en rojo con la etiqueta style.</p>
+        <p>Todos los párrafos del documento están en azul por la etiqueta de la cabecera.</p>
+        <h3 id="titulo1">Estos títulos están editados por la etiqueta de la cabecera usando su id:</h3>
+        <h3 id="titulo2">Estos títulos están editados por la etiqueta de la cabecera usando su id:</h3>
+        <h4 class="tituloh4">Estos títulos están editados por la etiqueta de la cabecera usando su clase:</h4>
+        <h4 class="tituloh4">Estos títulos están editados por la etiqueta de la cabecera usando su clase:</h4>
+        <span>Todos los span del documento están en azul por el documento de estilo de css.</span>
+        <h4>Todos los h4 del documento están en bioleta por el documento referenciado de css en el otro documento de css:</h4>
+        <p>Todo el documento está en font-family monospace por el * de la cabecera</p>
+        <p class="tituloh4">Este párrafo es diferente porque se ha especificado que los párrafor de la clase tituloh4 sean distintos</p>
+        <p><span>Todos los span dentro de un párrafo son distintos</span> pero no afecta al resto del párrafo.</p>
+        <p><span><div>Este div no está inmediatamente dentro de un parrafo se le aplica una regla.</div></span></p>
+        <div>Pero esa regla no se aplica a lod div fuera del párrafo, No funciona?????????????????????</div>
+
+        <p id="f">Este párrafo tiene color de fondo</p>
+        <p id="c">Este párrafo tiene color dado por rgb, fondo con hexadecimal</p>
+        <p id="l">Este párrafo tiene reclas de tipo de letra y la primera letra roja</p>
+
+        <a href="cunef.edu">Todos los enlaces se ponen morados al pasar el cursor por encima</a>
+        <div id="exception">Esta división tiene unas medidas dadas y el overflow lo trata con scrol aaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaa aaaa aaaaaa aaaaa</p>
     </body>
 </html>
