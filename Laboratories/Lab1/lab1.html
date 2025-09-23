@@ -5,8 +5,8 @@
         <title>Mi Página Web</title>
         <link rel="stylesheet" href="style.css">
         <style>
-            p{
-                color:blue;
+            *{
+                font-family: monospace;
             }
             #titulo1, #titulo2{
                 color:chartreuse;
@@ -14,8 +14,8 @@
             .tituloh4{
                 color:cadetblue;
             }
-            *{
-                font-family: monospace;
+            p{
+                color:blue;
             }
             p.tituloh4{
                 color:darkorange;
@@ -25,6 +25,21 @@
             }
             p>span{
                 color:darkslategray !important;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            td{
+                border: 1px solid black;
+
+            }
+            div{
+                box-sizing: border-box;
+                border: 1px solid black;
+                padding: 16px;
+                width: 100px;
+                height: 50px;
+                overflow: scroll;
             }
         </style>
     </head>
@@ -292,25 +307,30 @@
 
         <h2 id="iframe" >Iframes:</h2>
         <iframe src="https://www.cunef.edu" width="600" height="400"></iframe>
+        <hr>
 
         <h2 id="bloque">Elementos en Bloque:</h2>
         <h3>Los títulos son elementos de bloque</h3>
         <p>Los párrafos también, eso quiere decir que ocupan todo el ancho de la página</p>
-        <div>Las Divisiones tambien son elementos de bloque donde se pueden introducir elementos genéricos</div>
+        <div style="width: auto;">Las Divisiones tambien son elementos de bloque donde se pueden introducir elementos genéricos</div>
+        <hr>
 
         <h2 id="linea">Elementos en Linea:</h2>
         <span>Esta frase es un elemento.</span>
         <span>Y esta otra es distinta.</span>
         <span>Esto hace que se vayan añadiendo en paralelo.</span>
+        <hr>
 
         <h2 id="clasesEids">Clases e Ids:</h2>
         <p class="Parrafo">Este párrafo es de la clase Parrafo.</p>
         <p class="Parrafo">Este también, la clase mepermite darles estilo juntos</p>
         <p id="ultimo">Este párrafo tiene el id único de ultimo, que hace que le pueda dar estilo pero solo a él</p>
-        
+        <hr>
+
         <h2 id="transformaciones">Transformaciones:</h2>
         <p>Se representa así &lt;p&gt; para que se muestre la etiqueta sin que el navegador la reconozca como una etiqueta real.</p>
-    
+        <hr>
+
         <h2 id="css">CSS</h2>
         <p style="color: red;">Este texto está modificado con CSS para que esté en rojo con la etiqueta style.</p>
         <p>Todos los párrafos del documento están en azul por la etiqueta de la cabecera.</p>
@@ -323,14 +343,60 @@
         <p>Todo el documento está en font-family monospace por el * de la cabecera</p>
         <p class="tituloh4">Este párrafo es diferente porque se ha especificado que los párrafor de la clase tituloh4 sean distintos</p>
         <p><span>Todos los span dentro de un párrafo son distintos</span> pero no afecta al resto del párrafo.</p>
-        <p><span><div>Este div no está inmediatamente dentro de un parrafo se le aplica una regla.</div></span></p>
-        <div>Pero esa regla no se aplica a lod div fuera del párrafo, No funciona?????????????????????</div>
+        <p><span><div style="width: auto;">Este div no está inmediatamente dentro de un parrafo se le aplica una regla.</div></span></p>
+        <div style="width: auto;">Pero esa regla no se aplica a lod div fuera del párrafo, No funciona?????????????????????</div>
 
         <p id="f">Este párrafo tiene color de fondo</p>
         <p id="c">Este párrafo tiene color dado por rgb, fondo con hexadecimal</p>
         <p id="l">Este párrafo tiene reclas de tipo de letra y la primera letra roja</p>
 
         <a href="cunef.edu">Todos los enlaces se ponen morados al pasar el cursor por encima</a>
-        <div id="exception">Esta división tiene unas medidas dadas y el overflow lo trata con scrol aaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaa aaaa aaaaaa aaaaa</p>
+        <div id="exception">Esta división tiene unas medidas dadas y el overflow lo trata con scrol aaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaa aaaa aaaaaa aaaaa</p></div>
+        
+        <ul style="list-style-type: circle;">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+        </ul>
+
+        <ol style="list-style-type: decimal-leading-zero; list-style-position: inside;">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+        </ol>
+    
+        <table>
+            <tr>
+                <td>Celda 1</td>
+                <td>Celda 2</td>
+            </tr>
+            <tr>
+                <td>Celda 3</td>
+                <td>Celda 4</td>
+            </tr>
+        </table> <br>
+
+        <div style="width: 100%; height: auto; position: relative;">
+            En estas divisiones vemos cómo funcionan los tipos de posiciones.
+            <div>
+                Esta división mantiene su posición sin alterar.
+            </div>
+            <div style="left: 50px; top: 25px; position: relative;">
+                Esta tiene una posición relativa por lo que todas las medidas de los márgenes son en función de su posción original.
+            </div>
+            <div style="background-color: aquamarine; left: 50px; top: 25px; position: absolute;">
+                Esta tiene una posición absoluta, que como la división que la contiene tiene posición relativa se coloca en la posición absoluta de dentro de esta, si no, se pondría en una ubicación absoluta de la página.
+            </div>
+            <div style="background-color:darkkhaki; position: fixed; top: 25px; right: 25px;">
+                Esta tiene una posición fija, lo que la fija en la pantalla.
+            </div>
+            <div style="z-index: 2;">
+                Esta tiene prioridad 2 por lo que se muestra por encima de otros bloques.
+            </div>
+            <div style="all: unset; display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: end;">
+                <div style="all: initial; border: 1px solid black;">Esta ignora los estilos definidos previamente.</div>
+                <div style="all: initial; border: 1px solid black;">Estas divisiones están alineadas en columna centrandolas en el centro y empujandolas al final de la división.</div>
+                <div style="flex-grow: 1;"></div>
+                <div style="align-self: flex-start;"></div>
+            </div>
+        </div>
     </body>
 </html>
